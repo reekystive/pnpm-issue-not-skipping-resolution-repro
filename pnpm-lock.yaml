@@ -7,12 +7,16 @@ settings:
 importers:
 
   .:
+    dependencies:
+      aliased:
+        specifier: workspace:@private/foo@*
+        version: link:packages/foo
     devDependencies:
       es-toolkit:
         specifier: ^1.39.10
         version: 1.39.10
 
-  packages/bar: {}
+  packages/foo: {}
 
 packages:
 
