@@ -1,6 +1,6 @@
 # pnpm Not Resolution Skipping Issue Reproduction Repo
 
-This repository reproduces an issue where pnpm fails to skip the resolution step when using workspace aliases.
+This repository reproduces an issue [pnpm/pnpm#9887](https://github.com/pnpm/pnpm/issues/9887) where pnpm fails to skip the resolution step when using workspace aliases.
 
 ## Problem Description
 
@@ -85,4 +85,4 @@ Both workarounds result in proper resolution skipping behavior.
 
 ## Related Context
 
-This approach was inspired by [@pnpm/core's self-reference pattern](https://github.com/pnpm/pnpm/blob/main/packages/core/package.json) in the pnpm repository, where `@pnpm/core` declares itself as a devDependency. This pattern offers better compatibility than using `tsconfig.json#paths` or `package.json#imports`.
+This approach was inspired by [@pnpm/core's self-reference pattern](https://github.com/pnpm/pnpm/blob/05dd45ea82fff9c0b687cdc8f478a1027077d343/pkg-manager/core/package.json#L128) in the pnpm repository, where `@pnpm/core` declares itself as a devDependency. This pattern offers better compatibility than using `tsconfig.json#paths` or `package.json#imports`.
